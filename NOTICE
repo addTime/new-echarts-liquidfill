@@ -1,0 +1,28 @@
+English | [简体中文](NOTICE.zh-CN.md)
+
+NOTICE
+
+This project is an unofficial modified version of echarts-liquidfill
+(https://github.com/ecomfe/echarts-liquidfill), originally created by
+Ovilia (Zhang Wenli) and distributed under the BSD 3-Clause License.
+
+Original copyright notice:
+
+  Copyright (c) 2020, Baidu Inc.
+  All rights reserved.
+
+This modified version is maintained at
+https://github.com/addTime/new-echarts-liquidfill and is not affiliated with,
+sponsored by, or endorsed by the original author, the original project, or the
+Apache ECharts project.
+
+Main changes relative to the original project:
+
+- Support for both ECharts 5.x and 6.x, and removal of the peer dependency
+  version restriction
+- Import from `echarts/core` instead of internal deep paths
+- An additional ESM bundle for Node.js ESM and SSR
+- Fixes for value clamping, empty data, and `shape: 'container'` layout
+- TypeScript definitions and package publishing configuration
+
+The full BSD 3-Clause license text is in license.md.

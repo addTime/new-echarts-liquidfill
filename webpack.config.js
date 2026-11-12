@@ -29,7 +29,7 @@ function umdConfig(mode) {
     };
 }
 
-// ESM bundle for Node.js ESM (`import 'echarts-liquidfill'`), so that it shares
+// ESM bundle for Node.js ESM (`import 'new-echarts-liquidfill'`), so that it shares
 // the same echarts module instance as the application and can be tree-shaken.
 const esmConfig = {
     mode: 'production',

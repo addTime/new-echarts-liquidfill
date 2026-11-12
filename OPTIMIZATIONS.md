@@ -175,15 +175,15 @@ ESLint 9 flat config + Prettier：单引号、4 空格、`no-unused-vars`、`eqe
 
 ---
 
-## 10. license 字段不一致（待确认，不排期）
+## 10. license 字段不一致（已统一）
 
-**现状问题**
-`package.json` 的 `license` 字段是 `MIT`，但 `license.md` 是 BSD 3-Clause；两份 README 的 License 小节按 `license.md` 写为 BSD 3-Clause。
+**现状**
+`package.json` 的 `license` 字段与 `license.md` 均已为 `BSD-3-Clause`；两份 README 与两份 NOTICE 也按 BSD 3-Clause 表述，4.0.0 起已统一。
 
-**待确认事项**
-需要确定以哪一份为准，再统一 `package.json`、`license.md`、`README.md` / `README.zh-CN.md` 以及 npm 页面上的元数据。在决定前不做任何修改，本文档也不预设结论。
+**结论**
+以 `license.md` 为准，已同步 `package.json`、`README.md` / `README.zh-CN.md`、`NOTICE` / `NOTICE.zh-CN.md` 及 npm 元数据，无需进一步处理。
 
 **涉及文件**
-`package.json`、`license.md`、`README.md`、`README.zh-CN.md`
+`package.json`、`license.md`、`README.md`、`README.zh-CN.md`、`NOTICE`、`NOTICE.zh-CN.md`
 
-**优先级**：待确认
+**优先级**：已完成

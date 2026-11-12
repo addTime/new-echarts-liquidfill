@@ -1,5 +1,12 @@
 [English](README.md) | 简体中文
 
+[![npm version](https://img.shields.io/npm/v/new-echarts-liquidfill.svg)](https://www.npmjs.com/package/new-echarts-liquidfill)
+[![license](https://img.shields.io/npm/l/new-echarts-liquidfill.svg)](https://github.com/addTime/new-echarts-liquidfill/blob/main/license.md)
+
+> 这是非官方修改版，与原作者及 Apache ECharts 官方无关，也未获其背书。
+
+本版本的改动见 [CHANGELOG.md](CHANGELOG.md)。
+
 # 水球图
 
 [Apache ECharts](https://github.com/apache/echarts) 的水球图扩展，常用于以百分比形式展示数据。
@@ -22,17 +29,17 @@ ECharts 可以在 [GitHub dist 目录](https://github.com/apache/echarts/tree/ma
 >
 > 水球图要求的最低 ECharts 包是 GitHub 上的 [simple 版本](https://github.com/apache/echarts/blob/master/dist/echarts.simple.js)，或者在[在线构建](https://echarts.apache.org/zh/download.html)中不做任何勾选。如果你的其他图表需要其他图表类型或组件，请按需一并引入。
 
-## 使用 npm 安装 echarts-liquidfill
+## 使用 npm 安装 new-echarts-liquidfill
 
 ```sh
 # 将 echarts 安装为 peer dependency
 npm install echarts
-npm install echarts-liquidfill
+npm install new-echarts-liquidfill
 ```
 
 注意：
 
-| echarts-liquidfill | echarts |
+| new-echarts-liquidfill | echarts |
 | --- | --- |
 | 4.0.x（当前） | 5.x 和 6.x |
 | 3.0.x - 3.1.x | 5.x |
@@ -44,21 +51,21 @@ npm install echarts-liquidfill
 
 ```js
 import * as echarts from 'echarts';
-import 'echarts-liquidfill'
+import 'new-echarts-liquidfill'
 ```
 
 或者：
 
 ```js
 import * as echarts from 'echarts/core';
-import 'echarts-liquidfill'
+import 'new-echarts-liquidfill'
 ```
 
 CodeSandbox 上的基础示例见[这里](https://codesandbox.io/s/brave-rosalind-dj280?file=/src/index.js)。
 
-## 从 GitHub 下载 echarts-liquidfill
+## 从 GitHub 下载 new-echarts-liquidfill
 
-你可以在 [ECharts 官网](https://echarts.apache.org/zh/download.html) 下载最新的 ECharts 文件，并在[dist 目录](https://github.com/ecomfe/echarts-liquidfill/tree/master/dist)下载本扩展。
+你可以在 [ECharts 官网](https://echarts.apache.org/zh/download.html) 下载最新的 ECharts 文件，并在[dist 目录](https://github.com/addTime/new-echarts-liquidfill/tree/main/dist)下载本扩展。
 
 **注意：如果需要水球图的 tooltip，需要使用完整版 ECharts；否则 simple 版本即可满足需求。**
 
@@ -74,27 +81,27 @@ CodeSandbox 上的基础示例见[这里](https://codesandbox.io/s/brave-rosalin
 
 ## 快速上手
 
-- [API](https://github.com/ecomfe/echarts-liquidfill#api)
+- [API](#api)
 - [ECharts Gallery 上的示例](https://www.makeapie.com/explore.html#tags=liquidFill~sort=rank~timeframe=all~author=all)
 
 以下是一些常见用法：
 
-- [在一个图表中使用多个波浪](https://github.com/ecomfe/echarts-liquidfill#multiple-waves)
-- [修改波浪颜色和透明度](https://github.com/ecomfe/echarts-liquidfill#color-and-opacity)
-- [让波浪静止](https://github.com/ecomfe/echarts-liquidfill#static-waves)
-- [没有波浪的水面](https://github.com/ecomfe/echarts-liquidfill#still-water)
-- [为单个波浪设置属性](https://github.com/ecomfe/echarts-liquidfill#change-a-single-wave)
-- [修改背景和边框样式](https://github.com/ecomfe/echarts-liquidfill#background-style)
-- [隐藏图表轮廓](https://github.com/ecomfe/echarts-liquidfill#outline-style)
-- [用 SVG 修改形状](https://github.com/ecomfe/echarts-liquidfill#shape)
-- [设置动画](https://github.com/ecomfe/echarts-liquidfill#animation)
-- [修改文字内容和样式](https://github.com/ecomfe/echarts-liquidfill#change-text)
-- [修改阴影样式](https://github.com/ecomfe/echarts-liquidfill#shadow)
-- [设置 tooltip](https://github.com/ecomfe/echarts-liquidfill#tooltip)
-- [点击事件](https://github.com/ecomfe/echarts-liquidfill#click-event)
-- [让元素不可交互](https://github.com/ecomfe/echarts-liquidfill#non-interactable)
+- [在一个图表中使用多个波浪](#多个波浪)
+- [修改波浪颜色和透明度](#颜色与透明度)
+- [让波浪静止](#静态波浪)
+- [没有波浪的水面](#静水)
+- [为单个波浪设置属性](#修改单个波浪)
+- [修改背景和边框样式](#背景样式)
+- [隐藏图表轮廓](#轮廓样式)
+- [用 SVG 修改形状](#形状)
+- [设置动画](#动画)
+- [修改文字内容和样式](#修改文字)
+- [修改阴影样式](#阴影)
+- [设置 tooltip](#tooltip)
+- [点击事件](#点击事件)
+- [让元素不可交互](#不可交互)
 
-如有问题，可以 fork [Gallery 上的水球图示例](https://www.makeapie.com/editor.html?c=xr1XplzB4e)，把你的代码贴进去，然后在项目中[提 issue](https://github.com/ecomfe/echarts-liquidfill/issues/new)。
+如有问题，可以 fork [Gallery 上的水球图示例](https://www.makeapie.com/editor.html?c=xr1XplzB4e)，把你的代码贴进去，然后在项目中[提 issue](https://github.com/addTime/new-echarts-liquidfill/issues/new)。
 
 ## 示例
 
@@ -806,8 +813,8 @@ hover 时的波浪透明度。
 
 ```ts
 import * as echarts from 'echarts';
-import 'echarts-liquidfill';
-import type { LiquidFillSeriesOption } from 'echarts-liquidfill';
+import 'new-echarts-liquidfill';
+import type { LiquidFillSeriesOption } from 'new-echarts-liquidfill';
 
 const series: LiquidFillSeriesOption = {
     type: 'liquidFill',
@@ -829,9 +836,15 @@ $ npm run build   # 在 dist/ 中生成 development 和 production（压缩）�
 
 示例页面加载的是 `dist/echarts-liquidfill.js`，因此修改源码后需要先运行 `npm run build`，再在浏览器中打开 `example/index.html`。
 
-## 许可证
+使用该包只需 Node.js 16 及以上；本地构建与发布因 webpack-cli 7 需要 Node.js 20.9 及以上，两者要求不同。
 
-基于 [BSD 3-Clause License](license.md) 发布。
+## 来源与授权
+
+本项目是非官方修改版，基于 Ovilia 的
+[ecomfe/echarts-liquidfill](https://github.com/ecomfe/echarts-liquidfill)
+修改而来，原项目使用 BSD 3-Clause 许可。原始版权声明保留在
+[NOTICE](NOTICE)（[English](NOTICE) | [简体中文](NOTICE.zh-CN.md)），修改内容见 [CHANGELOG.md](CHANGELOG.md)，完整许可文本见
+[license.md](license.md)。本项目与原作者及 Apache ECharts 官方无关，也未获其背书。
 
 ## 声明
 

@@ -1,6 +1,6 @@
-// Type definitions for echarts-liquidfill
+// Type definitions for new-echarts-liquidfill
 // The plugin is registered by importing it for side effects:
-//   import 'echarts-liquidfill';
+//   import 'new-echarts-liquidfill';
 
 export type LiquidFillDirection = 'left' | 'right' | 'none';
 

@@ -1,5 +1,12 @@
 English | [简体中文](README.zh-CN.md)
 
+[![npm version](https://img.shields.io/npm/v/new-echarts-liquidfill.svg)](https://www.npmjs.com/package/new-echarts-liquidfill)
+[![license](https://img.shields.io/npm/l/new-echarts-liquidfill.svg)](https://github.com/addTime/new-echarts-liquidfill/blob/main/license.md)
+
+> Unofficial modified version. Not affiliated with or endorsed by the original author or the Apache ECharts project.
+
+See [CHANGELOG.md](CHANGELOG.md) for the changes in this release.
+
 # Liquid Fill Chart
 
 Liquid Fill Chart plugin for [Apache ECharts](https://github.com/apache/echarts), which is usually used to represent data in percentage.
@@ -22,17 +29,17 @@ ECharts can be downloaded at [GitHub dist directory](https://github.com/apache/e
 >
 > The minimum package of ECharts required by LiquidFill Chart is [simple version](https://github.com/apache/echarts/blob/master/dist/echarts.simple.js) on GitHub, or selecting nothing in [online builder](https://echarts.apache.org/zh/download.html) (in Chinese). If you need other chart types or components in your other chart, you should include them accordingly.
 
-## Install echarts-liquidfill with npm
+## Install new-echarts-liquidfill with npm
 
 ```sh
 # install echarts as peer dependency
 npm install echarts
-npm install echarts-liquidfill
+npm install new-echarts-liquidfill
 ```
 
 NOTE:
 
-| echarts-liquidfill | echarts |
+| new-echarts-liquidfill | echarts |
 | --- | --- |
 | 4.0.x (current) | 5.x and 6.x |
 | 3.0.x - 3.1.x | 5.x |
@@ -46,21 +53,21 @@ Import:
 
 ```js
 import * as echarts from 'echarts';
-import 'echarts-liquidfill'
+import 'new-echarts-liquidfill'
 ```
 
 Or:
 
 ```js
 import * as echarts from 'echarts/core';
-import 'echarts-liquidfill'
+import 'new-echarts-liquidfill'
 ```
 
 [Here](https://codesandbox.io/s/brave-rosalind-dj280?file=/src/index.js) is the basic example on CodeSandbox
 
-## Download echarts-liquidfill from GitHub
+## Download new-echarts-liquidfill from GitHub
 
-You may download the lastest ECharts files on [ECharts official site](https://echarts.apache.org/zh/download.html) and download this plugin in [dist directory](https://github.com/ecomfe/echarts-liquidfill/tree/master/dist).
+You may download the lastest ECharts files on [ECharts official site](https://echarts.apache.org/zh/download.html) and download this plugin in [dist directory](https://github.com/addTime/new-echarts-liquidfill/tree/main/dist).
 
 **Note that if you need tooltip for Liquid Fill Chart, you need the complete ECharts version. Otherwise, the simple version will be competent.**
 
@@ -78,27 +85,27 @@ Since [ECharts v3.7.0](https://github.com/apache/echarts/releases/tag/3.7.0), `t
 
 ## Quick Start
 
-- [API](https://github.com/ecomfe/echarts-liquidfill#api)
+- [API](#api)
 - [Examples at ECharts Gallery](https://www.makeapie.com/explore.html#tags=liquidFill~sort=rank~timeframe=all~author=all)
 
 Here are some common uses:
 
-- [Use multiple waves in a chart](https://github.com/ecomfe/echarts-liquidfill#multiple-waves)
-- [Change waves color and opacity](https://github.com/ecomfe/echarts-liquidfill#color-and-opacity)
-- [Make waves static](https://github.com/ecomfe/echarts-liquidfill#static-waves)
-- [Water with no waves](https://github.com/ecomfe/echarts-liquidfill#still-water)
-- [Set attributes for a single wave](https://github.com/ecomfe/echarts-liquidfill#change-a-single-wave)
-- [Change background and border style](https://github.com/ecomfe/echarts-liquidfill#background-style)
-- [Hide outline in chart](https://github.com/ecomfe/echarts-liquidfill#outline-style)
-- [Change shape with SVG](https://github.com/ecomfe/echarts-liquidfill#shape)
-- [Setup animation](https://github.com/ecomfe/echarts-liquidfill#animation)
-- [Change text content and style](https://github.com/ecomfe/echarts-liquidfill#change-text)
-- [Change shadow style](https://github.com/ecomfe/echarts-liquidfill#shadow)
-- [Setup tooltip](https://github.com/ecomfe/echarts-liquidfill#tooltip)
-- [Click event](https://github.com/ecomfe/echarts-liquidfill#click-event)
-- [Make an element non-interactable](https://github.com/ecomfe/echarts-liquidfill#non-interactable)
+- [Use multiple waves in a chart](#multiple-waves)
+- [Change waves color and opacity](#color-and-opacity)
+- [Make waves static](#static-waves)
+- [Water with no waves](#still-water)
+- [Set attributes for a single wave](#change-a-single-wave)
+- [Change background and border style](#background-style)
+- [Hide outline in chart](#outline-style)
+- [Change shape with SVG](#shape)
+- [Setup animation](#animation)
+- [Change text content and style](#change-text)
+- [Change shadow style](#shadow)
+- [Setup tooltip](#tooltip)
+- [Click event](#click-event)
+- [Make an element non-interactable](#non-interactable)
 
-To ask a question, you may fork [Liquid Fill Chart Example on Gallery](https://www.makeapie.com/editor.html?c=xr1XplzB4e) and copy your code there. Then you may [open an issue](https://github.com/ecomfe/echarts-liquidfill/issues/new) in this project.
+To ask a question, you may fork [Liquid Fill Chart Example on Gallery](https://www.makeapie.com/editor.html?c=xr1XplzB4e) and copy your code there. Then you may [open an issue](https://github.com/addTime/new-echarts-liquidfill/issues/new) in this project.
 
 
 ## Examples
@@ -852,8 +859,8 @@ Type definitions are shipped in `index.d.ts`:
 
 ```ts
 import * as echarts from 'echarts';
-import 'echarts-liquidfill';
-import type { LiquidFillSeriesOption } from 'echarts-liquidfill';
+import 'new-echarts-liquidfill';
+import type { LiquidFillSeriesOption } from 'new-echarts-liquidfill';
 
 const series: LiquidFillSeriesOption = {
     type: 'liquidFill',
@@ -876,9 +883,19 @@ $ npm run build   # development + production (minified) bundles in dist/
 The example pages load `dist/echarts-liquidfill.js`, so run `npm run build`
 before opening `example/index.html` in a browser.
 
-## License
+Using the package requires Node.js 16 or later. Building and publishing locally
+require Node.js 20.9 or later, because webpack-cli 7 requires it; the two
+requirements are different.
 
-Released under the [BSD 3-Clause License](license.md).
+## Origin & License
+
+This project is an unofficial modified version based on
+[ecomfe/echarts-liquidfill](https://github.com/ecomfe/echarts-liquidfill) by
+Ovilia, originally released under the BSD 3-Clause License. The original
+copyright notice is preserved in [NOTICE](NOTICE) ([English](NOTICE) | [简体中文](NOTICE.zh-CN.md)); the changes are listed in
+[CHANGELOG.md](CHANGELOG.md); the full license text is in
+[license.md](license.md). It is not affiliated with, sponsored by, or endorsed
+by the original author or the Apache ECharts project.
 
 ## Notice
 
