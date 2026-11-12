@@ -1,3 +1,5 @@
+English | [简体中文](README.zh-CN.md)
+
 # Liquid Fill Chart
 
 Liquid Fill Chart plugin for [Apache ECharts](https://github.com/apache/echarts), which is usually used to represent data in percentage.
@@ -650,7 +652,7 @@ Wave colors.
 
 ### shape {string}
 
-Shape of water fill chart. It can be one of the default symbols: `'circle'`, `'rect'`, `'roundRect'`, `'triangle'`, `'diamond'`, `'pin'`, `'arrow'`. Or, an SVG path starting with `'path://'`.
+Shape of water fill chart. It can be one of the default symbols: `'circle'`, `'rect'`, `'roundRect'`, `'triangle'`, `'diamond'`, `'pin'`, `'arrow'`. Or `'container'`, which fills the whole container. Or, an SVG path starting with `'path://'`.
 
 
 ### center {string[]}
@@ -873,6 +875,10 @@ $ npm run build   # development + production (minified) bundles in dist/
 
 The example pages load `dist/echarts-liquidfill.js`, so run `npm run build`
 before opening `example/index.html` in a browser.
+
+## License
+
+Released under the [BSD 3-Clause License](license.md).
 
 ## Notice
 
